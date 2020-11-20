@@ -1,15 +1,22 @@
-// typical function
+// Ways of writing the function.
 
-// function getWinningPercentage(wins, matches) {
-//     return matches / wins
+// function getWinningPercentage(wins: number, matches: number): number {
+//     const result: number = matches / wins
+//     return result
 // }
 
-// console.log(getWinningPercentage(4, 20))
+// const getWinningPercentage = function(wins: number, matches: number): number {
+//     const result: number = matches / wins
+//     return result
+// }
 
-const getTotalWins = function() {
-    return 20
-}
-console.log(getTotalWins())
+// const getWinningPercentage = (wins: number, matches: number): number => {
+//     const result: number = matches / wins
+//     return result
+// }
 
-const getWinningPercentage = wins => 50 / wins
-console.log(getWinningPercentage(3))
+
+// TODO: One-liner
+const getWinningPercentage = (wins: number, matches: number): number => matches / wins
+
+console.log(getWinningPercentage(3, 10))
