@@ -17,6 +17,15 @@
 
 
 // TODO: One-liner
-const getWinningPercentage = (wins: number, matches: number): number => matches / wins
+// const getWinningPercentage = (wins: number, matches: number): number => matches / wins
 
-console.log(getWinningPercentage(3, 10))
+const getWinningPercentage = (wins: number): number => wins / 50
+
+console.log(getWinningPercentage(2))
+
+const getPlayerProfile = (): {name: string, matches: number} => ({
+    name: 'Player Name',
+    matches: 40,
+})
+
+console.log(getPlayerProfile())
