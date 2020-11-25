@@ -13,4 +13,7 @@ Blog post: [3 Ways to Implement the Singleton Pattern in TypeScript with Node.js
 
 ### Arrow Functions
 
+Run the sample code
+
+    tsc && node dist/arrowFunctions/index.js
 
