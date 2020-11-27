@@ -27,7 +27,7 @@ const getWinningPercentage = (wins: number): number => wins / 50
 console.log(getWinningPercentage(2))
 
 const getPlayerProfile = (): {name: string, matches: number} => ({
-    name: 'Player Name',
+    name: 'Ardy',
     matches: 40,
 })
 
