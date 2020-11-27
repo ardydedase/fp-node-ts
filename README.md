@@ -17,3 +17,6 @@ Run the sample code
 
     tsc && node dist/arrowFunctions/index.js
 
+## Functions in a variable
+
+    tsc && node dist/functionsVariable/index.js
