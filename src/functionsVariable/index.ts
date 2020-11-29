@@ -48,9 +48,9 @@ const variantFunctionMap: object = {
 
 variantFunctionMap['A']()
 
-// NOTE: Example using array with functions
-// We want to create a Person Object
-const person: object = {
+// NOTE: Initialize Example using array with functions
+// We want to create a Employee Object
+let employee: object = {
     id: 1,
     isActive: true,
 }
@@ -65,16 +65,25 @@ const addMonthlySalary = (person: object) => (
 const addAnnualSalary = (person: object) => (
     {...person, annualSalary: person['monthlySalary'] * 12})
 
+
+// NOTE: Imperative way
 // Start by passing the person object, 
 // then pass the updatedPerson object in the succeeding functions.
 
-let updatedPerson: object = {}
-updatedPerson = addName(person)
-updatedPerson = addGender(updatedPerson)
-updatedPerson = addJobTitle(updatedPerson)
-updatedPerson = addMonthlySalary(updatedPerson)
-updatedPerson = addAnnualSalary(updatedPerson)
+employee = addName(employee)
+employee = addGender(employee)
+employee = addJobTitle(employee)
+employee = addMonthlySalary(employee)
+employee = addAnnualSalary(employee)
+console.log(employee)
 
-console.log(updatedPerson)
+// NOTE: Functional way
+const personFunctionsArray: Array<Function> = [
+    addName,
+    addGender,
+    addJobTitle,
+    addMonthlySalary,
+    addAnnualSalary,
+]
 
-// Functional way
+// personFunctionsArray.forEach(personFunc => person = personFunc(person))
