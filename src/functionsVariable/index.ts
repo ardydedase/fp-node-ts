@@ -50,32 +50,35 @@ variantFunctionMap['A']()
 
 // NOTE: Initialize Example using array with functions
 // We want to create a Employee Object
-let employee: object = {
-    id: 1,
-    isActive: true,
-}
-const addName = (person: object) => (
+const addName = (person: object): object => (
     {...person, name: 'John Doe'})
-const addGender = (person: object) => (
+const addGender = (person: object): object => (
     {...person, gender: 'Male'})
-const addJobTitle = (person: object) => (
+const addJobTitle = (person: object): object => (
     {...person, title: 'Software Engineer'})
-const addMonthlySalary = (person: object) => (
+const addMonthlySalary = (person: object): object => (
     {...person, monthlySalary: 1000})
-const addAnnualSalary = (person: object) => (
+const addAnnualSalary = (person: object): object => (
     {...person, annualSalary: person['monthlySalary'] * 12})
 
 
 // NOTE: Imperative way
 // Start by passing the person object, 
 // then pass the updatedPerson object in the succeeding functions.
+const updateEmployee = (): object => {
+    let employee: object = {
+        id: 1,
+        isActive: true,
+    }
+    employee = addName(employee)
+    employee = addGender(employee)
+    employee = addJobTitle(employee)
+    employee = addMonthlySalary(employee)
+    employee = addAnnualSalary(employee)
+    return employee
+}
 
-employee = addName(employee)
-employee = addGender(employee)
-employee = addJobTitle(employee)
-employee = addMonthlySalary(employee)
-employee = addAnnualSalary(employee)
-console.log(employee)
+console.log(updateEmployee())
 
 // NOTE: Functional way
 const personFunctionsArray: Array<Function> = [
