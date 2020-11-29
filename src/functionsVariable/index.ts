@@ -27,7 +27,7 @@ const fetchData = () => {
 
 // Mocked async call
 const fetchMockData = (): {name: string, title: string} => ({
-    name: 'Ardy',
+    name: 'John Doe',
     title: 'Software Engineer', 
 })
 
@@ -47,3 +47,34 @@ const variantFunctionMap: object = {
 }
 
 variantFunctionMap['A']()
+
+// NOTE: Example using array with functions
+// We want to create a Person Object
+const person: object = {
+    id: 1,
+    isActive: true,
+}
+const addName = (person: object) => (
+    {...person, name: 'John Doe'})
+const addGender = (person: object) => (
+    {...person, gender: 'Male'})
+const addJobTitle = (person: object) => (
+    {...person, title: 'Software Engineer'})
+const addMonthlySalary = (person: object) => (
+    {...person, monthlySalary: 1000})
+const addAnnualSalary = (person: object) => (
+    {...person, annualSalary: person['monthlySalary'] * 12})
+
+// Start by passing the person object, 
+// then pass the updatedPerson object in the succeeding functions.
+
+let updatedPerson: object = {}
+updatedPerson = addName(person)
+updatedPerson = addGender(updatedPerson)
+updatedPerson = addJobTitle(updatedPerson)
+updatedPerson = addMonthlySalary(updatedPerson)
+updatedPerson = addAnnualSalary(updatedPerson)
+
+console.log(updatedPerson)
+
+// Functional way
