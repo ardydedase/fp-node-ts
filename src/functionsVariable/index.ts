@@ -65,28 +65,38 @@ const addAnnualSalary = (person: object): object => (
 // NOTE: Imperative way
 // Start by passing the person object, 
 // then pass the updatedPerson object in the succeeding functions.
+
+// const updateEmployee = (): object => {
+//     let employee: object = {
+//         id: 1,
+//         isActive: true,
+//     }
+//     employee = addName(employee)
+//     employee = addGender(employee)
+//     employee = addJobTitle(employee)
+//     employee = addMonthlySalary(employee)
+//     employee = addAnnualSalary(employee)
+//     return employee
+// }
+
+// console.log(updateEmployee())
+
+// NOTE: Functional way
 const updateEmployee = (): object => {
     let employee: object = {
         id: 1,
         isActive: true,
     }
-    employee = addName(employee)
-    employee = addGender(employee)
-    employee = addJobTitle(employee)
-    employee = addMonthlySalary(employee)
-    employee = addAnnualSalary(employee)
+    const personFunctionsArray: Array<Function> = [
+        addName,
+        addGender,
+        addJobTitle,
+        addMonthlySalary,
+        addAnnualSalary,
+    ]    
+    personFunctionsArray.forEach(
+        personFunc => employee = personFunc(employee))
     return employee
 }
 
 console.log(updateEmployee())
-
-// NOTE: Functional way
-const personFunctionsArray: Array<Function> = [
-    addName,
-    addGender,
-    addJobTitle,
-    addMonthlySalary,
-    addAnnualSalary,
-]
-
-// personFunctionsArray.forEach(personFunc => person = personFunc(person))
