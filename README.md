@@ -28,3 +28,7 @@ Run the sample code
 ## Return functions as values
 
     tsc && node dist/returnFunctions/index.js    
+
+## Closures
+
+    tsc && node dist/closures/index.js
