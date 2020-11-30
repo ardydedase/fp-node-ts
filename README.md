@@ -20,3 +20,7 @@ Run the sample code
 ## Functions in a variable
 
     tsc && node dist/functionsVariable/index.js
+
+## Functions as an argument
+
+    tsc && node dist/functionsAsArgument/index.js
