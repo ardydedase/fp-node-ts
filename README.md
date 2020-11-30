@@ -24,3 +24,7 @@ Run the sample code
 ## Functions as an argument
 
     tsc && node dist/functionsAsArgument/index.js
+
+## Return functions as values
+
+    tsc && node dist/returnFunctions/index.js    
