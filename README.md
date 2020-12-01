@@ -32,3 +32,7 @@ Run the sample code
 ## Closures
 
     tsc && node dist/closures/index.js
+
+## Private variables
+
+    tsc && node dist/private/index.js
