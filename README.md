@@ -36,3 +36,7 @@ Run the sample code
 ## Private variables
 
     tsc && node dist/private/index.js
+
+## Higher-order functions
+
+    tsc && node dist/higherOrder/index.js
