@@ -24,7 +24,7 @@ Run the sample code
 
 ## Return functions as values
 
-    tsc && node dist/returnFunctions/index.js    
+    tsc && node dist/returnFunctions/index.js
 
 ## Closures
 
@@ -37,3 +37,7 @@ Run the sample code
 ## Higher-order functions
 
     tsc && node dist/higherOrder/index.js
+
+## Sample word counteer
+
+    tsc && node dist/wordCounter/index.js
