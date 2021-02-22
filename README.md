@@ -43,4 +43,7 @@ Run the sample code
     tsc && node dist/wordCounter/index.js
 
 ## Anagram
-    TODO
+    tsc && node dist/anagrams/index.js
+
+## Input validator
+    tsc && node dist/inputValidator/index.js
